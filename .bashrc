@@ -114,3 +114,4 @@ fi
 
 # Launch Starship
 eval "$(starship init bash)"
+neofetch --config ~/.config/neofetch/config.conf
