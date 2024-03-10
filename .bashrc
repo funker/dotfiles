@@ -112,6 +112,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Launch neofetch
+neofetch #--config ~/.config/neofetch/config.conf
 # Launch Starship
 eval "$(starship init bash)"
-neofetch --config ~/.config/neofetch/config.conf
