@@ -1,3 +1,8 @@
+# GENERAL
+alias cls='clear'
+
+
+
 # DOCKER
 alias dstopcont='sudo docker stop $(docker ps -a -q)'
 alias dstopall='sudo docker stop $(sudo docker ps -aq)'
