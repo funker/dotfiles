@@ -1,7 +1,14 @@
 # GENERAL
 alias cls='clear'
 
-
+# DOCKER COMPOSE
+alias dcup='docker-compose -f ~/docker/docker-compose.yaml up -d'
+alias dcdown='docker-compose -f ~/docker/docker-compose.yaml down'
+alias dcrec='docker-compose -f ~/docker/docker-compose.yaml up -d --force-recreate'
+alias dcedit='nano ~/docker/docker-compose.yaml'
+alias dcrestart='docker-compose -f ~/docker/docker-compose.yaml restart'
+alias dcstart='docker-compose -f ~/docker/docker-compose.yaml start'
+alias dcstop='docker-compose -f ~/docker/docker-compose.yaml stop'
 
 # DOCKER
 alias dstopcont='sudo docker stop $(docker ps -a -q)'
@@ -17,7 +24,7 @@ alias docps='sudo docker ps -a'
 alias dcrm='dcrun rm'
 alias docdf='sudo docker system df'
 alias dclogs='sudo docker logs -tf --tail="50" '
-alias fixsecrets='sudo chown -R root:root /home/USER/docker/secrets ; sudo chmod -R 600 /home/USER/docker/secrets'
+alias fixsecrets='sudo chown -R root:root /home/jan/docker/secrets ; sudo chmod -R 600 /home/jan/docker/secrets'
 
 # STACK UP AND DOWN
 alias 1down='cd /home/USER/docker ; dcdown1v ; dcdown1'
@@ -66,13 +73,13 @@ alias dcrestart2v='dcrun2v restart '
 alias dcpull2v='cd /home/USER/docker ; sudo docker-compose -f /home/USER/docker/docker-compose-t2-vpn.yml  pull'
 
 # DOCKER TRAEFIK 1 SWARM
-alias dslogs='sudo docker service logs -tf --tail="50"'
-alias dsps='sudo docker stack ps zstack'
-alias dsse='sudo docker stack services zstack'
-alias dsls='sudo docker stack ls'
-alias dsrm='sudo docker stack rm'
-alias dsup='sudo docker stack deploy --compose-file /home/USER/docker/docker-compose-swarm.yml zstack'
-alias dshelp='echo "dslogs dsps dsse dsls dsrm dsup"'
+#alias dslogs='sudo docker service logs -tf --tail="50"'
+#alias dsps='sudo docker stack ps zstack'
+#alias dsse='sudo docker stack services zstack'
+#alias dsls='sudo docker stack ls'
+#alias dsrm='sudo docker stack rm'
+#alias dsup='sudo docker stack deploy --compose-file /home/USER/docker/docker-compose-swarm.yml zstack'
+#alias dshelp='echo "dslogs dsps dsse dsls dsrm dsup"'
 
 # SHUTDOWN AND RESTART
 alias shutdown='sudo shutdown -h now'
